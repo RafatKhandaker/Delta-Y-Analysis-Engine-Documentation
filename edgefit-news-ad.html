@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consumer Report: Why Lifters Are Ditching $200/Mo Coaches &amp; 3 Fitness Apps | Edgefit.app</title>
+  <meta name="description" content="An investigative look at fitness app subscription traps and how Edgefit.app consolidates custom workouts, AI macro targets, and automated grocery lists." />
+  <style>
+    :root {
+      --bg-page: #f7f6f2;
+      --bg-paper: #ffffff;
+      --bg-subtle: #f1efe9;
+      --bg-dark: #111827;
+      --bg-dark-card: #1f2937;
+      --text-primary: #141413;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --accent-news: #991b1b;
+      --accent-cta: #d97706;
+      --accent-cta-hover: #b45309;
+      --accent-green: #15803d;
+      --accent-green-bg: #dcfce7;
+      --border-light: #e5e7eb;
+      --border-dark: #111827;
+      --font-serif: Georgia, 'Times New Roman', Times, serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 6px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 30px rgba(0,0,0,0.14);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 76px;
+    }
+
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-news), var(--accent-cta));
+      transition: width 0.1s ease-out;
+    }
+
+    .masthead {
+      background: var(--bg-paper);
+      border-bottom: 2px solid var(--border-dark);
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    .masthead-top {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+    }
+
+    .pub-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.35rem, 4vw, 1.95rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .pub-sub {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .article-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--bg-paper);
+      padding: 24px 20px 44px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (min-width: 640px) {
+      .article-wrapper {
+        margin: 24px auto;
+        padding: 40px 44px 56px;
+        border-radius: var(--radius-sm);
+      }
+    }
+
+    .kicker-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .kicker-badge {
+      background: var(--accent-news);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+
+    .audience-callout {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-news);
+      background: #fef2f2;
+      border-left: 3px solid var(--accent-news);
+      padding: 8px 12px;
+      margin-bottom: 18px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    h1.headline {
+      font-family: var(--font-serif);
+      font-size: clamp(1.65rem, 5vw, 2.45rem);
+      line-height: 1.18;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -0.015em;
+    }
+
+    .subheadline {
+      font-size: clamp(1.02rem, 2.8vw, 1.2rem);
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 26px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .byline-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-dark);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .verified-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--accent-green-bg);
+      color: var(--accent-green);
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .article-body p {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      color: #1f2937;
+    }
+
+    .lead-paragraph::first-letter {
+      font-family: var(--font-serif);
+      float: left;
+      font-size: 3.3rem;
+      line-height: 0.85;
+      padding-right: 10px;
+      padding-top: 4px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    h2.section-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.35rem, 3.8vw, 1.7rem);
+      line-height: 1.25;
+      margin: 34px 0 14px;
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--bg-subtle);
+      padding-bottom: 8px;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 22px 0 28px;
+    }
+
+    @media (min-width: 640px) {
+      .pain-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .pain-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      border-top: 3px solid var(--accent-news);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+    }
+
+    .pain-card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .pain-card p {
+      font-size: 0.88rem !important;
+      margin-bottom: 0 !important;
+      color: var(--text-secondary) !important;
+      line-height: 1.45;
+    }
+
+    .solution-box {
+      background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      margin: 26px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .solution-tag {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #92400e;
+      background: #fef3c7;
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .benefit-list {
+      list-style: none;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #ffffff;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .check-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .benefit-text strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+
+    .benefit-text span {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      display: block;
+    }
+
+    .table-wrapper {
+      margin: 26px 0;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      box-shadow: var(--shadow-sm);
+    }
+
+    table.comp-table {
+      width: 100%;
+      min-width: 620px;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    .comp-table th {
+      background: var(--bg-dark);
+      color: #ffffff;
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .comp-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+    }
+
+    .comp-table tr.highlight-row {
+      background: #fffbeb;
+      font-weight: 600;
+    }
+
+    .comp-table tr.highlight-row td {
+      border-bottom: 2px solid #f59e0b;
+      color: #111827;
+    }
+
+    .badge-winner {
+      display: inline-block;
+      background: var(--accent-cta);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .calc-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin: 28px 0;
+    }
+
+    .calc-header {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .calc-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .calc-btn {
+      flex: 1 1 140px;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .calc-btn.active {
+      background: var(--bg-dark);
+      color: #ffffff;
+      border-color: var(--bg-dark);
+    }
+
+    .calc-result {
+      background: #ffffff;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--accent-green);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .savings-figure {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent-green);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    @media (min-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .review-card {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .review-author {
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .review-quote {
+      font-size: 0.88rem !important;
+      color: var(--text-secondary) !important;
+      font-style: italic;
+      margin-bottom: 0 !important;
+    }
+
+    .faq-section {
+      margin: 32px 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 15px 16px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-question:hover {
+      background: var(--bg-subtle);
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      font-weight: 400;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease-out;
+      padding: 0 16px;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 320px;
+      padding: 0 16px 16px;
+    }
+
+    .offer-box {
+      background: var(--bg-dark);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 28px 22px;
+      margin: 36px 0 28px;
+      box-shadow: var(--shadow-lg);
+      border: 2px solid #f59e0b;
+    }
+
+    .offer-eyebrow {
+      text-align: center;
+      color: #fbbf24;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .offer-title {
+      font-family: var(--font-serif);
+      text-align: center;
+      font-size: clamp(1.45rem, 4.2vw, 2rem);
+      line-height: 1.22;
+      margin-bottom: 14px;
+    }
+
+    .offer-subtitle {
+      text-align: center;
+      color: #d1d5db;
+      font-size: 0.96rem;
+      max-width: 580px;
+      margin: 0 auto 22px;
+    }
+
+    .stack-list {
+      background: var(--bg-dark-card);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 22px;
+      list-style: none;
+    }
+
+    .stack-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.92rem;
+    }
+
+    .stack-list li:last-child {
+      border-bottom: none;
+    }
+
+    .stack-val {
+      color: #9ca3af;
+      text-decoration: line-through;
+      white-space: nowrap;
+      font-size: 0.85rem;
+    }
+
+    .price-contrast {
+      text-align: center;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      margin-bottom: 20px;
+    }
+
+    .anchor-strike {
+      color: #9ca3af;
+      font-size: 0.92rem;
+      margin-bottom: 4px;
+    }
+
+    .annual-anchor {
+      color: #fde68a;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-price {
+      font-size: clamp(1.75rem, 5vw, 2.35rem);
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .hero-price span {
+      color: #fbbf24;
+    }
+
+    .btn-primary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--accent-cta);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.08rem;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.45);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-cta-hover);
+      transform: translateY(-1px);
+    }
+
+    .micro-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: #d1d5db;
+    }
+
+    @media (min-width: 640px) {
+      .micro-steps {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+      }
+    }
+
+    .guarantee-strip {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      text-align: center;
+      font-size: 0.82rem;
+      color: #a7f3d0;
+    }
+
+    .ps-section {
+      border-top: 2px dashed #d1d5db;
+      padding-top: 24px;
+      margin-top: 28px;
+    }
+
+    .ps-section p {
+      font-size: 0.98rem;
+    }
+
+    .fallback-box {
+      margin-top: 22px;
+      background: #f0fdf4;
+      border: 2px solid #16a34a;
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    .fallback-box h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: #14532d;
+      margin-bottom: 8px;
+    }
+
+    .fallback-box p {
+      font-size: 0.95rem !important;
+      color: #166534 !important;
+      margin-bottom: 16px !important;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      width: 100%;
+      max-width: 480px;
+      background: #16a34a;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.98rem;
+      padding: 15px 18px;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+      transition: background 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #15803d;
+    }
+
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #111827;
+      color: #ffffff;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.18);
+      z-index: 999;
+      transform: translateY(100%);
+      transition: transform 0.25s ease;
+    }
+
+    .sticky-bar.visible {
+      transform: translateY(0);
+    }
+
+    .sticky-info {
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
+    .sticky-info strong {
+      color: #fbbf24;
+      display: block;
+      font-size: 0.92rem;
+    }
+
+    .sticky-cta {
+      background: var(--accent-cta);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 2000;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      max-width: 440px;
+      width: 100%;
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .promo-code-box {
+      background: var(--bg-subtle);
+      border: 2px dashed #16a34a;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-family: monospace;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #14532d;
+      margin: 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .copy-btn {
+      background: #14532d;
+      color: #fff;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    footer.editorial-footer {
+      max-width: 760px;
+      margin: 16px auto 0;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <span>Consumer Health &amp; Tech Report</span>
+      <span id="liveDate">Special Investigation</span>
+      <span>4 Min Read</span>
+    </div>
+    <div class="pub-title">The Consumer Fitness Chronicle</div>
+    <div class="pub-sub">Independent Reviews on Training Tech, Nutrition Software &amp; Subscription Transparency</div>
+  </header>
+
+  <main class="article-wrapper">
+    <div class="kicker-row">
+      <span class="kicker-badge">Special Investigation</span>
+      <span class="verified-pill">&#10003; Consumer Pricing Audit</span>
+    </div>
+
+    <div class="audience-callout">
+      ATTENTION EVERYDAY LIFTERS, MACRO TRACKERS &amp; GYM-GOERS TIRED OF PAYING $50+/MONTH ACROSS MULTIPLE APPS
+    </div>
+
+    <h1 class="headline">
+      Why Everyday Lifters Are Ditching $200/Month Coaches and Canceling Three Separate Fitness Apps for This New All-In-One AI System
+    </h1>
+
+    <p class="subheadline">
+      A closer look at how a mobile-first web platform is replacing fragmented workout trackers, macro calculators, and rigid 7-day templates&mdash;without hidden auto-renewal traps.
+    </p>
+
+    <div class="byline">
+      <div class="byline-author">
+        <div class="author-avatar">CF</div>
+        <div>
+          <strong>Consumer Tech Desk</strong><br />
+          <span>Special Report on Fitness Software &amp; Billing Practices</span>
+        </div>
+      </div>
+      <div>Updated Today &bull; Mobile Edition</div>
+    </div>
+
+    <article class="article-body">
+      <p class="lead-paragraph">
+        If you check the monthly bank statements of most dedicated gym-goers right now, you will likely spot a quiet financial leak: <strong>"fitness stack bloat."</strong> One app charges ~$15.99/month just to log sets and reps. A second app charges ~$11.99/month to calculate calories and macros. And despite paying nearly $30 to $65 every month across disconnected tools, lifters still stand in the grocery aisle guessing what food actually fits their numbers.
+      </p>
+
+      <p>
+        Yet over the past few months, a growing wave of everyday lifters has begun canceling those single-purpose subscriptions in favor of a streamlined, mobile-fitted web application called <strong>Edgefit.app</strong>&mdash;a platform that unifies custom training programs, AI macro targets, and automated grocery lists in one place, and lets new users test the full system for <strong>$1</strong> (or try it free for 3 days with no credit card required).
+      </p>
+
+      <h2 class="section-heading">The Three Biggest Frustrations Driving Lifters Away From Legacy Fitness Apps</h2>
+      <p>
+        An analysis of thousands of public consumer reviews across platforms like Trustpilot reveals that lifters rarely quit fitness apps because they lack motivation. They quit because the software creates friction&mdash;both in the gym and on their credit card statements:
+      </p>
+
+      <div class="pain-grid">
+        <div class="pain-card">
+          <h3>1. Subscription Traps &amp; "Gotcha" Renewals</h3>
+          <p>Unexpected annual charges, free trials that silently bill your card, and maze-like cancellation menus remain the #1 consumer complaint.</p>
+        </div>
+        <div class="pain-card">
+          <h3>2. Disconnected App Juggling</h3>
+          <p>Switching between a lifting tracker, a macro counter, and a notes app for groceries wastes hours every week and breaks consistency.</p>
+        </div>
+        <div class="pain-card">
+          <h3>3. Rigid 7-Day Cookie-Cutter Splits</h3>
+          <p>Most apps force users into basic weekly templates with limited exercise libraries&mdash;failing lifters who run hybrid athletic or cyclical blocks.</p>
+        </div>
+      </div>
+
+      <h2 class="section-heading">How Edgefit.app Consolidates Training, AI Macros &amp; Grocery Lists Into One Mobile Web App</h2>
+      <p>
+        Instead of forcing users to download bloated software or stitch together three separate subscriptions, <strong>Edgefit.app</strong> was engineered as an all-in-one, mobile-fitted web application. Built by dedicated software architects with modern web infrastructure, it runs fast directly from your phone&rsquo;s browser without app-store clutter or syncing headaches.
+      </p>
+
+      <div class="solution-box">
+        <span class="solution-tag">Inside The Edgefit System</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 6px;">
+          What Changes When Everything Lives Under One Roof:
+        </h3>
+        <ul class="benefit-list">
+          <li class="benefit-item">
+            <div class="check-icon">&#10003;</div>
+            <div class="benefit-text">
+              <strong>Train Your Way&mdash;Not a Rigid 7-Day Template</strong>
+              <span>Build custom workout programs from scratch, name any exercise you want, and log sets via <em>Time-Based</em>, <em>Repetition-Based</em>, or <em>Pause-Hold</em> inputs across hybrid athletic or longer cyclical blocks.</span>
+            </div>
+          </li>
+          <li class="benefit-item">
+            <div class="check-icon">&#10003;</div>
+            <div class="benefit-text">
+              <strong>Walk Into the Store Knowing Exactly What to Buy</strong>
+              <span>Goal-aware AI macro targets automatically translate into ready-to-shop grocery lists&mdash;eliminating meal-prep guesswork and saving hours every week.</span>
+            </div>
+          </li>
+          <li class="benefit-item">
+            <div class="check-icon">&#10003;</div>
+            <div class="benefit-text">
+              <strong>Zero Billing Surprises &amp; One-Click Control</strong>
+              <span>No hidden add-ons, clear pre-checkout confirmation prompts, no-credit-card promo trial codes, and instant self-managed cancellation inside Account Settings.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading">Side-by-Side Consumer Breakdown: Edgefit.app vs. Niche Fitness Apps</h2>
+      <p>
+        To see how Edgefit stacks up against popular single-purpose fitness and nutrition apps, review the feature and pricing comparison below <em>(swipe horizontally on mobile)</em>:
+      </p>
+
+      <div class="table-wrapper">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>App</th>
+              <th>All-In-One Focus</th>
+              <th>Standout AI Feature</th>
+              <th>Typical Pricing</th>
+              <th>Best Fit If...</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td>
+                Edgefit.app<br />
+                <span class="badge-winner">All-In-One Pick</span>
+              </td>
+              <td>Workouts, Macros &amp; Groceries</td>
+              <td>Goal-aware blueprints, macro targets &amp; automated grocery lists</td>
+              <td><strong>$1 First Month</strong><br />(Under $250/yr or &le;$30/mo)</td>
+              <td>You want simplicity, flexibility &amp; deep value</td>
+            </tr>
+            <tr>
+              <td><strong>MacroFactor</strong></td>
+              <td>Niche Macros</td>
+              <td>Adaptive TDEE algorithm</td>
+              <td>~$11.99/mo or $71.99/yr</td>
+              <td>Focus is dialed-in nutrition math only</td>
+            </tr>
+            <tr>
+              <td><strong>Fitbod</strong></td>
+              <td>Niche Workouts</td>
+              <td>Adaptive gym-strength workouts</td>
+              <td>~$15.99/mo or $95.99/yr</td>
+              <td>You want zero-guesswork gym sessions</td>
+            </tr>
+            <tr>
+              <td><strong>JuggernautAI</strong></td>
+              <td>Niche Powerlifting</td>
+              <td>Adaptive periodized strength blocks</td>
+              <td>~$22&ndash;$34.99/mo</td>
+              <td>You train heavy compounds / powerlifting</td>
+            </tr>
+            <tr>
+              <td><strong>RP Hypertrophy</strong></td>
+              <td>Niche Bodybuilding</td>
+              <td>Mesocycle volume progression</td>
+              <td>~$25/mo (billed annually)</td>
+              <td>You want strict, science-based hypertrophy</td>
+            </tr>
+            <tr>
+              <td><strong>Carbon Diet Coach</strong></td>
+              <td>Niche Nutrition</td>
+              <td>Structured diet coaching / check-ins</td>
+              <td>~$11.99/mo or $99.99/yr</td>
+              <td>You want a hands-off nutrition coach</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="calc-card">
+        <div class="calc-header">Interactive Cost Comparison: See What You Save Switching to Edgefit</div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 10px;">
+          Select what you currently pay for fitness &amp; nutrition guidance:
+        </p>
+        <div class="calc-controls">
+          <button type="button" class="calc-btn active" data-cost="2400" data-label="1-on-1 Online Coach ($200/mo)">1-on-1 Coach ($200/mo)</button>
+          <button type="button" class="calc-btn" data-cost="660" data-label="3 Niche Apps ($55/mo)">3 Separate Apps ($55/mo)</button>
+          <button type="button" class="calc-btn" data-cost="420" data-label="2 Niche Apps ($35/mo)">2 Separate Apps ($35/mo)</button>
+        </div>
+        <div class="calc-result">
+          <div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);" id="calcLabel">Compared to 1-on-1 Online Coach ($200/mo):</div>
+            <div style="font-size: 0.9rem; font-weight: 600;">First-Year Savings with Edgefit.app:</div>
+          </div>
+          <div class="savings-figure" id="savingsAmount">Save $2,150+/yr</div>
+        </div>
+      </div>
+
+      <h2 class="section-heading">What Everyday Lifters Are Saying</h2>
+      <div class="testimonials-grid">
+        <div class="review-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-author">David K. <span class="verified-pill">Verified</span></div>
+          <p class="review-quote">"I used to juggle three apps for lifting, macros, and groceries. It was a mess. Edgefit.app put it all together. Now I just follow the plan. Gamechanger!"</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-author">Sarah M. <span class="verified-pill">Verified</span></div>
+          <p class="review-quote">"Finally, a program that builds my workouts AND tells me what to buy at the store. The $1 trial is incredible. Saving so much time and money!"</p>
+        </div>
+        <div class="review-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-author">Mark R. <span class="verified-pill">Verified</span></div>
+          <p class="review-quote">"Saved thousands on a coach. Edgefit's AI is smarter and the templates are fantastic. Best $1 I ever spent."</p>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Consumer Protection FAQ: Billing, Trials &amp; Support</h2>
+      <div class="faq-section">
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Will I be hit with unexpected renewal charges or hidden fees?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            No. Edgefit uses a simple recurring monthly subscription capped at no more than $30/month&mdash;with zero hidden costs. What you see is what you pay. Choosing a 6-month or yearly plan saves up to 31% (under $250/year), and you can switch or cancel anytime with one click in Account Settings.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Do promotional free trials require a credit card upfront?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            No. Promotional free trial links require zero credit card details at sign-up. When your promotional trial finishes, you remain in control and can choose to renew directly inside Account Settings.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>What if I run into a bug or need billing help?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Edgefit provides 24-hour support through our community Discord channel (where engineers actively review feedback) plus direct email support with a 72-hour response time. Furthermore, refunds are 100% granted for any issue caused by our system.
+          </div>
+        </div>
+      </div>
+
+      <section class="offer-box" id="offerBox">
+        <div class="offer-eyebrow">Limited Reader Offer &bull; All-In-One Fitness System</div>
+        <h2 class="offer-title">Get Full Access to the Entire Edgefit System for Under $250/Year&mdash;Or Start Your First Month Today for Just $1</h2>
+        <p class="offer-subtitle">
+          Replace your workout tracker, macro calculator, and meal planner with one mobile-fitted AI platform&mdash;backed by transparent pricing and one-click cancellation.
+        </p>
+
+        <ul class="stack-list">
+          <li>
+            <span><strong>Custom Hybrid &amp; Cyclical Workout Builder</strong> (Time, Rep &amp; Pause-Hold Logging)</span>
+            <span class="stack-val">$192/yr value</span>
+          </li>
+          <li>
+            <span><strong>Goal-Aware AI Macro &amp; Calorie Engine</strong></span>
+            <span class="stack-val">$144/yr value</span>
+          </li>
+          <li>
+            <span><strong>Automated Store-Ready Grocery List Generator</strong></span>
+            <span class="stack-val">$120/yr value</span>
+          </li>
+          <li>
+            <span><strong>24/7 Community Discord &amp; Direct Engineering Support</strong></span>
+            <span class="stack-val">Included</span>
+          </li>
+        </ul>
+
+        <div class="price-contrast">
+          <div class="anchor-strike">Private Coaches: $2,400+/yr &bull; 3 Separate Niche Apps: $480&ndash;$780/yr</div>
+          <div class="annual-anchor">Full Annual Edgefit System: Under $250/Year (Save up to 31%)</div>
+          <div class="hero-price">Start Your First Full Month Today for <span>$1</span></div>
+        </div>
+
+        <a href="https://edgefit.app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          START FOR $1 TODAY AT EDGEFIT.APP &rarr;
+        </a>
+
+        <div class="micro-steps">
+          <div><strong>1. Open Mobile App:</strong> Instant access in your phone browser</div>
+          <div><strong>2. Set Your Goal:</strong> Custom split &amp; AI macros in 60 seconds</div>
+          <div><strong>3. Shop &amp; Train:</strong> Follow your automated grocery &amp; lift plan</div>
+        </div>
+
+        <div class="guarantee-strip">
+          &#10003; Transparent Checkout Confirmation &bull; &#10003; 1-Click Self-Managed Cancellation &bull; &#10003; 100% System-Issue Refund Guarantee
+        </div>
+      </section>
+
+      <section class="ps-section">
+        <p>
+          <strong>P.S. &mdash; The Real Cost of Waiting:</strong> Doing nothing today simply means paying another month of inflated fees across three disconnected fitness apps&mdash;or spending $200+/month on coaching&mdash;while still guessing what to buy at the grocery store and fighting rigid 7-day templates. With Edgefit&rsquo;s <strong>$1 first-month entry</strong> (and under-$250/year full-system value), you can consolidate your entire training and nutrition routine in under two minutes with one-click cancellation protection.
+        </p>
+
+        <div class="fallback-box">
+          <h3>Still Not Convinced? Try It Completely Free for 3 Days</h3>
+          <p>
+            Click the button below to unlock a promotional link for <strong>3 full days of access</strong> to the Edgefit application&mdash;<strong>NO CREDIT CARD SIGN-UP REQUIRED.</strong> Test the custom workout builder, AI macros, and automated grocery lists completely free before deciding.
+          </p>
+          <button type="button" class="btn-secondary" id="openPromoModal">
+            UNLOCK 3-DAY FREE ACCESS (NO CREDIT CARD REQUIRED) &rarr;
+          </button>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="editorial-footer">
+    <p>Advertorial &amp; Consumer Software Overview for Edgefit.app &bull; Built for Mobile &amp; Desktop Browsers &bull; &copy; 2026 Edgefit</p>
+  </footer>
+
+  <div class="sticky-bar" id="stickyBar">
+    <div class="sticky-info">
+      <strong>Edgefit.app All-In-One</strong>
+      <span>Workouts + AI Macros + Grocery Lists</span>
+    </div>
+    <a href="#offerBox" class="sticky-cta">Start for $1 &rarr;</a>
+  </div>
+
+  <div class="modal-overlay" id="promoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="closePromoModal" aria-label="Close modal">&times;</button>
+      <span class="verified-pill" style="margin-bottom: 10px;">No Credit Card Required</span>
+      <h3 id="modalTitle" style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 8px;">
+        Your 3-Day Free Access Pass is Unlocked
+      </h3>
+      <p style="font-size: 0.9rem; color: var(--text-secondary);">
+        Use the promotional code below at sign-up on <strong>Edgefit.app</strong> to activate 3 full days of access with zero payment details required:
+      </p>
+      <div class="promo-code-box">
+        <span id="promoCodeText">FREE3DAYS</span>
+        <button type="button" class="copy-btn" id="copyPromoBtn">Copy Code</button>
+      </div>
+      <a href="https://edgefit.app?promo=FREE3DAYS" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width: 100%;">
+        CONTINUE TO EDGEFIT.APP FREE TRIAL &rarr;
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function setHeaderDate() {
+      const dateEl = document.getElementById('liveDate');
+      if (dateEl) {
+        const options = { month: 'long', day: 'numeric', year: 'numeric' };
+        dateEl.textContent = new Date().toLocaleDateString('en-US', options);
+      }
+    })();
+
+    const progressBar = document.getElementById('progressBar');
+    const stickyBar = document.getElementById('stickyBar');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = scrollPercent + '%';
+
+      if (scrollTop > 380) {
+        stickyBar.classList.add('visible');
+      } else {
+        stickyBar.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    const calcBtns = document.querySelectorAll('.calc-btn');
+    const calcLabel = document.getElementById('calcLabel');
+    const savingsAmount = document.getElementById('savingsAmount');
+    const edgefitAnnual = 250;
+
+    calcBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        calcBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const currentAnnual = parseInt(btn.getAttribute('data-cost'), 10);
+        const label = btn.getAttribute('data-label');
+        const netSavings = Math.max(0, currentAnnual - edgefitAnnual);
+
+        calcLabel.textContent = `Compared to ${label}:`;
+        savingsAmount.textContent = `Save $${netSavings.toLocaleString()}+/yr`;
+      });
+    });
+
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    const openPromoModal = document.getElementById('openPromoModal');
+    const closePromoModal = document.getElementById('closePromoModal');
+    const promoModal = document.getElementById('promoModal');
+    const copyPromoBtn = document.getElementById('copyPromoBtn');
+    const promoCodeText = document.getElementById('promoCodeText');
+
+    openPromoModal.addEventListener('click', () => {
+      promoModal.classList.add('active');
+    });
+
+    closePromoModal.addEventListener('click', () => {
+      promoModal.classList.remove('active');
+    });
+
+    promoModal.addEventListener('click', (e) => {
+      if (e.target === promoModal) {
+        promoModal.classList.remove('active');
+      }
+    });
+
+    copyPromoBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(promoCodeText.textContent.trim()).then(() => {
+        copyPromoBtn.textContent = 'Copied!';
+        setTimeout(() => {
+          copyPromoBtn.textContent = 'Copy Code';
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
